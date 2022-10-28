@@ -9,6 +9,10 @@
                 <span>余额:</span>
                 <span>{{$web3.utils.fromWei(item.balance,'ether')}}</span>
             </div>
+<!--            <div>-->
+<!--                <span>当前代币余额:</span>-->
+<!--                <span>{{$web3.utils.fromWei(getTokenBalance(item.account)) }}</span>-->
+<!--            </div>-->
         </div>
     </div>
 </template>
@@ -128,7 +132,22 @@
                     arr2.push(arr.slice(i, i + size))
                 }
                 return arr2
-            }
+            },
+            // async getTokenBalance(address){
+            //     let obj={
+            //         module:'account',
+            //         action:'tokenbalance',
+            //         contractaddress:'0xc8dc1B4812409c9e335e39F6781b11bf5F8A7A48',
+            //         address:address,
+            //         tag:'latest'
+            //     }
+            //     let data = await getBalabce(obj)
+            //     if(data.status==1){
+            //         return data.result
+            //     }else {
+            //         return 1
+            //     }
+            // }
         }
     }
 </script>
