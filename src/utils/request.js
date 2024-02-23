@@ -6,8 +6,9 @@ import axios from 'axios'
 //1. 创建新的axios实例，
 const service = axios.create({
     // 公共接口--这里注意后面会讲
-
-    baseURL: 'https://api.bscscan.com/api?apikey=54FK8M9RE6S5KIDFG1T412ZYAIRMY6DA4C',
+    // eth:2YWQTDPUXZSNAPQM34PXG25UHNMC5AQG2E
+    // bsc:54FK8M9RE6S5KIDFG1T412ZYAIRMY6DA4C
+    baseURL: 'https://api.etherscan.io/api?apikey=2YWQTDPUXZSNAPQM34PXG25UHNMC5AQG2E',
     // 超时时间 单位是ms，这里设置了3s的超时时间
     timeout: 3 * 1000
 })
